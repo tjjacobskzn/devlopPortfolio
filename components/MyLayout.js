@@ -14,7 +14,7 @@ const Layout = (props) => (
     <Head>
   <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JVSGVKK2RW"
+          src="https://www.googletagmanager.com/gtag/js?id=UA-229683137-3"
         />
 
         <script
@@ -23,7 +23,7 @@ const Layout = (props) => (
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-JVSGVKK2RW', { page_path: window.location.pathname });
+              gtag('config', 'UA-229683137-3', { page_path: window.location.pathname });
             `,
           }}
         />
