@@ -1,5 +1,6 @@
 import Layout from "../components/MyLayout";
 import Image from "react-bootstrap/Image";
+import Head from "next/head";
 
 // this is the 'landing page' for this app.
 
@@ -14,6 +15,7 @@ const photo = {
 
 export default () => (
   <Layout>
+  <Head></Head>
     <div style={landingDiv}>
       <div>
         <h2>TJ Jacobs</h2>
