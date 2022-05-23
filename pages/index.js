@@ -15,7 +15,23 @@ const photo = {
 
 export default () => (
   <Layout>
-  <Head></Head>
+  <Head>
+  <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-229683137-3"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-229683137-3', { page_path: window.location.pathname });
+            `,
+          }}
+        />
+  </Head>
     <div style={landingDiv}>
       <div>
         <h2>TJ Jacobs</h2>
