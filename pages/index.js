@@ -1,6 +1,7 @@
 import Layout from "../components/MyLayout";
 import Image from "react-bootstrap/Image";
 import Head from "next/head";
+import Script from "next/script"
 
 // this is the 'landing page' for this app.
 
@@ -16,21 +17,19 @@ const photo = {
 export default () => (
   <Layout>
   <Head>
-  <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-229683137-3"
-        />
+  <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8DY0SPBTX0"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-229683137-3', { page_path: window.location.pathname });
-            `,
-          }}
-        />
+          gtag('config', 'G-8DY0SPBTX0');
+        `}
+      </Script>
   </Head>
     <div style={landingDiv}>
       <div>
