@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "./Header";
+import Script from "next/script"
 
 // css in JSX format
 const layoutStyle = {
@@ -12,29 +13,18 @@ const layoutStyle = {
 const Layout = (props) => (
   <div>
     <Head>
-  <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-229683137-3"
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-229683137-3', { page_path: window.location.pathname });
-            `,
-          }}
-        />
-
-      <link
-        rel="stylesheet"
-        // this styles the head.
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossOrigin="anonymous"
+  <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8DY0SPBTX0"
+        strategy="afterInteractive"
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8DY0SPBTX0');
+        `}
+      </Script>
     </Head>
 
     <div style={layoutStyle}>
