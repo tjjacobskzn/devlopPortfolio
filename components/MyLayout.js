@@ -12,6 +12,21 @@ const layoutStyle = {
 const Layout = (props) => (
   <div>
     <Head>
+  <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-229683137-1"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-229683137-1', { page_path: window.location.pathname });
+            `,
+          }}
+        />
 
       <link
         rel="stylesheet"
