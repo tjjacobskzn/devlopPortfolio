@@ -12,6 +12,14 @@ const layoutStyle = {
 const Layout = (props) => (
   <div>
     <Head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TKQ77BS18K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TKQ77BS18K');
+</script>
       <link
         rel="stylesheet"
         // this styles the head.
